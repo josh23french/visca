@@ -10,6 +10,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'go test ./... -coverprofile=coverage.txt'
+        archiveArtifacts artifacts: 'coverage.txt', fingerprint: true
       }
     }
 

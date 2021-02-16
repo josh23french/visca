@@ -19,6 +19,8 @@ package visca
 import (
 	"bufio"
 	"io"
+
+	"github.com/rs/zerolog/log"
 )
 
 // Scanner represents a
@@ -44,6 +46,7 @@ func splitPackets(data []byte, atEOF bool) (advance int, token []byte, err error
 // NewScanner constructs a Scanner
 func NewScanner(buffer io.Reader) *Scanner {
 	scanner := bufio.NewScanner(buffer)
+	scanner.Buffer([]byte{}, 32)
 	scanner.Split(splitPackets)
 
 	return &Scanner{
@@ -52,18 +55,36 @@ func NewScanner(buffer io.Reader) *Scanner {
 	}
 }
 
-// Scan returns a slice of byte slices, each containing a packet
-func (s *Scanner) Scan() [][]byte {
-	packets := make([][]byte, 0)
-
-	for s.scanner.Scan() {
-		packet := s.scanner.Bytes()
-		if len(packet) <= 2 {
-			// Skip runts (scanner returns a zero-length slice last in the common case)
-			continue
+// Scan sends packets to the given channel
+func (s *Scanner) Scan(c chan *Packet, quit chan struct{}) {
+loop:
+	for {
+		select {
+		case <-quit:
+			break loop
+		default:
+			ok := s.scanner.Scan()
+			if !ok {
+				log.Err(s.scanner.Err()).Msg("Scan stopped")
+				break loop
+			}
+			packetBytes := s.scanner.Bytes()
+			if len(packetBytes) == 0 {
+				log.Warn().Msg("Packet is empty!!!")
+				break loop
+			}
+			if len(packetBytes) <= 2 {
+				log.Warn().Msg("Packet is smaller than 3 bytes!")
+				// Skip runts (scanner returns a zero-length slice last in the common case)
+				continue
+			}
+			packet, err := PacketFromBytes(packetBytes)
+			if err != nil {
+				log.Err(err).Msg("error creating packet from bytes")
+				continue
+			}
+			c <- packet
 		}
-		packets = append(packets, packet)
 	}
-
-	return packets
+	close(c)
 }

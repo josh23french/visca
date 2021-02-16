@@ -20,6 +20,9 @@ import (
 	"errors"
 )
 
+// Terminator is the last byte in a VISCA packet
+const Terminator = 0xFF
+
 // Errors
 var (
 	ErrInvalidVISCAPacket = errors.New("Invalid VISCA packet")
@@ -28,9 +31,9 @@ var (
 
 // Packet is a high-level representation of a VISCA packet; source/dest are private to ensure packets are always valid
 type Packet struct {
-	source      int    // Where the packet came from; 0-7
-	destination int    // Where the packet is going; 0-7 or 8 for broadcast
-	Message     []byte // The VISCA command or inquiry (to be decoded at a higher level)
+	source      int     // Where the packet came from; 0-7
+	destination int     // Where the packet is going; 0-7 or 8 for broadcast
+	Message     Message // The VISCA command or inquiry (to be decoded at a higher level)
 }
 
 // NewPacket constructs a new Packet or returns an error
@@ -47,8 +50,13 @@ func NewPacket(source, destination int, message []byte) (*Packet, error) {
 
 // PacketFromBytes constructs a Packet from raw bytes or returns an error
 func PacketFromBytes(byteArr []byte) (*Packet, error) {
+	// Check for packet small/big
+	if len(byteArr) < 3 || len(byteArr) > 16 {
+		return nil, ErrInvalidVISCAPacket
+	}
+
 	// Check for valid packet footer
-	if byteArr[len(byteArr)-1] != 0xff {
+	if byteArr[len(byteArr)-1] != Terminator {
 		return nil, ErrInvalidVISCAPacket
 	}
 
@@ -77,7 +85,7 @@ func (p *Packet) Bytes() (bytes []byte) {
 	bytes = make([]byte, 0)
 	bytes = append(bytes, header)
 	bytes = append(bytes, p.Message...)
-	bytes = append(bytes, 0xFF)
+	bytes = append(bytes, Terminator)
 	return
 }
 

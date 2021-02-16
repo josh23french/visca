@@ -1,3 +1,4 @@
+//  error.go - VISCA error messages
 // 	Copyright (C) 2021  Joshua French
 //
 // 	This program is free software: you can redistribute it and/or modify
@@ -15,34 +16,29 @@
 
 package visca
 
-import (
-	"bytes"
-	"fmt"
-	"testing"
+import "errors"
 
-	"github.com/stretchr/testify/assert"
+// Error is an "enum"
+type Error byte
+
+// VISCAError constants
+const (
+	MessageLengthError   Error = 0x01
+	SyntaxError          Error = 0x02
+	CommandBufferFull    Error = 0x03
+	CommandCanceled      Error = 0x04
+	NoSocket             Error = 0x05
+	CommandNotExecutable Error = 0x41
 )
 
-func TestScanner(t *testing.T) {
-	buffer := bytes.NewBuffer([]byte{0x81, 0x00, 0xFF, 0x90, 0x00, 0xFF, 0x81})
-
-	scanner := NewScanner(buffer)
-	c := make(chan *Packet)
-	quit := make(chan struct{})
-	defer close(quit)
-	go scanner.Scan(c, quit)
-
-	packets := make([]*Packet, 0)
-	for packet := range c {
-		packets = append(packets, packet)
+// NewErrorMessage creates an error message
+func NewErrorMessage(socket uint8, err Error) (Message, error) {
+	if socket > 2 {
+		return nil, errors.New("invalid socket number")
 	}
 
-	assert.Equal(t, 2, len(packets), "should have two packets")
-
-	fmt.Printf("Bytes: %v\n", packets[0])
-
-	pkt := packets[0]
-	assert.Equal(t, 0, pkt.Source(), "source should be 0")
-	assert.Equal(t, 1, pkt.Destination(), "destination should be 1")
-	assert.Equal(t, Message{0x00}, pkt.Message, "message should be 0x00")
+	return []byte{
+		0x60 + 0b0000_0011&socket,
+		byte(err),
+	}, nil
 }

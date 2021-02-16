@@ -26,19 +26,19 @@ func TestPacketFromBytes(t *testing.T) {
 	assert.Nil(t, err, "error should be nil")
 	assert.Equal(t, 0, pkt.Source(), "source should be zero")
 	assert.Equal(t, 1, pkt.Destination(), "destination should be one")
-	assert.Equal(t, []byte{0xF4, 0x66}, pkt.Message, "message should match")
+	assert.Equal(t, Message{0xF4, 0x66}, pkt.Message, "message should match")
 
 	pkt, err = PacketFromBytes([]byte{0x82, 0x00, 0xFF})
 	assert.Nil(t, err, "error should be nil")
 	assert.Equal(t, 0, pkt.Source(), "source should be zero")
 	assert.Equal(t, 2, pkt.Destination(), "destination should be one")
-	assert.Equal(t, []byte{0x00}, pkt.Message, "message should match")
+	assert.Equal(t, Message{0x00}, pkt.Message, "message should match")
 
 	pkt, err = PacketFromBytes([]byte{0xA0, 0x00, 0xFF})
 	assert.Nil(t, err, "error should be nil")
 	assert.Equal(t, 2, pkt.Source(), "source should be two")
 	assert.Equal(t, 0, pkt.Destination(), "destination should be zero")
-	assert.Equal(t, []byte{0x00}, pkt.Message, "message should match")
+	assert.Equal(t, Message{0x00}, pkt.Message, "message should match")
 
 	pkt, err = PacketFromBytes([]byte{0xA0, 0x00, 0xF0})
 	assert.Nil(t, pkt, "packet should be nil")

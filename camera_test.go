@@ -1,7 +1,6 @@
 package visca
 
 import (
-	"fmt"
 	"net"
 	"strings"
 	"testing"
@@ -17,7 +16,7 @@ func TestTCPConnectionFromString(t *testing.T) {
 		ln.Accept()
 	}()
 	conn, err := connectionFromString(ln.Addr().String(), 10*time.Millisecond)
-	fmt.Printf("Error: %v\n", err)
+	// fmt.Printf("Error: %v\n", err)
 	assert.Equal(t, nil, err, "does not error")
 	assert.NotEqual(t, nil, conn, "conn is not nil")
 }

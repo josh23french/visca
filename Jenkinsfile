@@ -6,7 +6,7 @@ pipeline {
   environment {
     GO111MODULE = 'on'
     GOPATH = "${WORKSPACE}/go"
-    PATH = "${PATH}:${WORKSPACE}/go/bin}"
+    PATH = "${PATH}:${WORKSPACE}/go/bin"
   }
   stages {
     stage('Build') {

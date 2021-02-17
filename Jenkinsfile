@@ -5,7 +5,7 @@ pipeline {
   }
   environment {
     GO111MODULE = 'on'
-    GOPATH = './go'
+    GOPATH = '$(pwd)/go'
   }
   stages {
     stage('Build') {

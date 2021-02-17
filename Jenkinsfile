@@ -9,8 +9,10 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'go test ./... -coverprofile=coverage.txt'
-        archiveArtifacts artifacts: 'coverage.txt', fingerprint: true
+        sh 'go get github.com/axw/gocov/gocov'
+        sh 'go get github.com/AlekSi/gocov-xml'
+        sh 'gocov test github.com/josh23french/visca | gocov-xml > coverage.xml'
+        junit 'coverage.xml'
       }
     }
 

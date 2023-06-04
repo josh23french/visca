@@ -26,16 +26,28 @@ const SocketMask = 0b0000_0011
 // MessageType indicates the type of packet
 type MessageType int
 
-// MessageType constants
 const (
-	MsgInvalid       MessageType = iota
-	MsgCommand                   // 0x01
-	MsgInquiry                   // 0x09
-	MsgCancel                    // 0x2y
-	MsgNetworkChange             // 0x38
-	MsgACK                       // 0x4y
-	MsgCompletion                // 0x5y
-	MsgError                     // 0x60
+	// MsgInvalid is NOT a valid message (0x00)
+	MsgInvalid MessageType = iota
+	// MsgCommand sends operational Commands to the Camera. (0x01)
+	MsgCommand
+	// MsgInquiry is used for inquiring about the current state of the Camera. (0x09)
+	MsgInquiry
+	// MsgCancel cancels the command in the given Socket of the Camera (0x2y)
+	MsgCancel
+	// MsgAddressSet sets the address of a Camera. (0x30)
+	//
+	// Use when initializing the network. Always broadcasted.
+	// It is returned by the last Camera in the series to the controller (still broadcast) with the number of cameras + 1.
+	MsgAddressSet
+	// MsgNetworkChange is sent by a Camera when a device is removed from or added to the network. (0x38)
+	MsgNetworkChange
+	// MsgACK is returned by a Camera when it receives a Command. No ACK message is returned for an inquiry. (0x4y)
+	MsgACK
+	// MsgCompletion is returned by a Camera when execution of Commands or Inquiries is completed. (0x5y)
+	MsgCompletion
+	// MsgError is returned instead of a Completion Message when a Command or Inquiry could not be executed or failed. (0x60)
+	MsgError
 )
 
 //go:generate enumer -json -text -yaml -type=MessageType
@@ -66,6 +78,10 @@ func (m Message) Type() MessageType {
 		return MsgInquiry
 	case 0x20, 0x21, 0x22:
 		return MsgCancel
+	case 0x30:
+		return MsgAddressSet
+	case 0x38:
+		return MsgNetworkChange
 	case 0x40, 0x41, 0x42:
 		return MsgACK
 	case 0x50, 0x51, 0x52:

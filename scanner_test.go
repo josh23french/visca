@@ -24,7 +24,11 @@ import (
 )
 
 func TestScanner(t *testing.T) {
-	buffer := bytes.NewBuffer([]byte{0x81, 0x00, 0xFF, 0x90, 0x00, 0xFF, 0x81})
+	buffer := bytes.NewBuffer([]byte{
+		0x81, 0x00, 0xFF,
+		0x90, 0x00, 0xFF,
+		0x81, 0xFF, // bad packet shouldn't count; still expecting 2 packets
+	})
 
 	scanner := NewScanner(buffer)
 	c := make(chan *Packet)
@@ -45,4 +49,24 @@ func TestScanner(t *testing.T) {
 	assert.Equal(t, 0, pkt.Source(), "source should be 0")
 	assert.Equal(t, 1, pkt.Destination(), "destination should be 1")
 	assert.Equal(t, Message{0x00}, pkt.Message, "message should be 0x00")
+}
+
+func TestScannerWithBadPackets(t *testing.T) {
+	buffer := bytes.NewBuffer([]byte{
+		0x81, 0xFF, // too short
+		0x81, 0x00, 0x90, 0x00, 0x00, 0x00, 0x90, 0x00, 0x00, 0x00, 0x90, 0x00, 0x00, 0x00, 0x90, 0x00, 0xFF, // too long
+	})
+
+	scanner := NewScanner(buffer)
+	c := make(chan *Packet)
+	quit := make(chan struct{})
+	defer close(quit)
+	go scanner.Scan(c, quit)
+
+	packets := make([]*Packet, 0)
+	for packet := range c {
+		packets = append(packets, packet)
+	}
+
+	assert.Equal(t, 0, len(packets), "should have no packets")
 }

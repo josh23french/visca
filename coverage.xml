@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.46829268" branch-rate="0" lines-covered="96" lines-valid="205" branches-covered="0" branches-valid="0" complexity="0" version="" timestamp="1613560517199">
+	<packages>
+		<package name="github.com/josh23french/visca" line-rate="0.46829268" branch-rate="0" complexity="0" line-count="205" line-hits="96">
+			<classes>
+				<class name="CategoryCode" filename="categorycode_enumer.go" line-rate="0" branch-rate="0" complexity="0" line-count="29" line-hits="0">
+					<methods>
+						<method name="String" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="24" hits="0"></line>
+								<line number="26" hits="0"></line>
+								<line number="27" hits="0"></line>
+								<line number="29" hits="0"></line>
+								<line number="30" hits="0"></line>
+								<line number="32" hits="0"></line>
+								<line number="34" hits="0"></line>
+							</lines>
+						</method>
+						<method name="IsACategoryCode" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="65" hits="0"></line>
+								<line number="66" hits="0"></line>
+								<line number="67" hits="0"></line>
+								<line number="70" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MarshalJSON" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="75" hits="0"></line>
+							</lines>
+						</method>
+						<method name="UnmarshalJSON" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="80" hits="0"></line>
+								<line number="81" hits="0"></line>
+								<line number="82" hits="0"></line>
+								<line number="85" hits="0"></line>
+								<line number="86" hits="0"></line>
+								<line number="87" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MarshalText" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="92" hits="0"></line>
+							</lines>
+						</method>
+						<method name="UnmarshalText" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="97" hits="0"></line>
+								<line number="98" hits="0"></line>
+								<line number="99" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MarshalYAML" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="104" hits="0"></line>
+							</lines>
+						</method>
+						<method name="UnmarshalYAML" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="109" hits="0"></line>
+								<line number="110" hits="0"></line>
+								<line number="111" hits="0"></line>
+								<line number="114" hits="0"></line>
+								<line number="115" hits="0"></line>
+								<line number="116" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="24" hits="0"></line>
+						<line number="26" hits="0"></line>
+						<line number="27" hits="0"></line>
+						<line number="29" hits="0"></line>
+						<line number="30" hits="0"></line>
+						<line number="32" hits="0"></line>
+						<line number="34" hits="0"></line>
+						<line number="65" hits="0"></line>
+						<line number="66" hits="0"></line>
+						<line number="67" hits="0"></line>
+						<line number="70" hits="0"></line>
+						<line number="75" hits="0"></line>
+						<line number="80" hits="0"></line>
+						<line number="81" hits="0"></line>
+						<line number="82" hits="0"></line>
+						<line number="85" hits="0"></line>
+						<line number="86" hits="0"></line>
+						<line number="87" hits="0"></line>
+						<line number="92" hits="0"></line>
+						<line number="97" hits="0"></line>
+						<line number="98" hits="0"></line>
+						<line number="99" hits="0"></line>
+						<line number="104" hits="0"></line>
+						<line number="109" hits="0"></line>
+						<line number="110" hits="0"></line>
+						<line number="111" hits="0"></line>
+						<line number="114" hits="0"></line>
+						<line number="115" hits="0"></line>
+						<line number="116" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="categorycode_enumer.go" line-rate="0" branch-rate="0" complexity="0" line-count="4" line-hits="0">
+					<methods>
+						<method name="CategoryCodeString" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="52" hits="0"></line>
+								<line number="53" hits="0"></line>
+								<line number="55" hits="0"></line>
+							</lines>
+						</method>
+						<method name="CategoryCodeValues" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="60" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="52" hits="0"></line>
+						<line number="53" hits="0"></line>
+						<line number="55" hits="0"></line>
+						<line number="60" hits="0"></line>
+					</lines>
+				</class>
+				<class name="Header" filename="command.go" line-rate="1" branch-rate="0" complexity="0" line-count="5" line-hits="5">
+					<methods>
+						<method name="ToByte" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="16" hits="1"></line>
+								<line number="17" hits="1"></line>
+								<line number="18" hits="1"></line>
+								<line number="19" hits="1"></line>
+								<line number="20" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="16" hits="1"></line>
+						<line number="17" hits="1"></line>
+						<line number="18" hits="1"></line>
+						<line number="19" hits="1"></line>
+						<line number="20" hits="1"></line>
+					</lines>
+				</class>
+				<class name="-" filename="command.go" line-rate="0.7407407" branch-rate="0" complexity="0" line-count="27" line-hits="20">
+					<methods>
+						<method name="NewCommand" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="30" hits="1"></line>
+							</lines>
+						</method>
+						<method name="parseIntFromNibbles" signature="" line-rate="0.9" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="46" hits="1"></line>
+								<line number="47" hits="0"></line>
+								<line number="50" hits="1"></line>
+								<line number="51" hits="1"></line>
+								<line number="52" hits="1"></line>
+								<line number="53" hits="1"></line>
+								<line number="54" hits="1"></line>
+								<line number="55" hits="1"></line>
+								<line number="57" hits="1"></line>
+								<line number="59" hits="1"></line>
+							</lines>
+						</method>
+						<method name="decodePosition" signature="" line-rate="0.85714287" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="63" hits="1"></line>
+								<line number="64" hits="1"></line>
+								<line number="65" hits="1"></line>
+								<line number="66" hits="1"></line>
+								<line number="67" hits="0"></line>
+								<line number="69" hits="1"></line>
+								<line number="70" hits="1"></line>
+							</lines>
+						</method>
+						<method name="decodeTilt" signature="" line-rate="0.8" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="74" hits="1"></line>
+								<line number="75" hits="1"></line>
+								<line number="76" hits="0"></line>
+								<line number="78" hits="1"></line>
+								<line number="79" hits="1"></line>
+							</lines>
+						</method>
+						<method name="decodeZoom" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="84" hits="0"></line>
+								<line number="85" hits="0"></line>
+								<line number="87" hits="0"></line>
+								<line number="88" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="30" hits="1"></line>
+						<line number="46" hits="1"></line>
+						<line number="47" hits="0"></line>
+						<line number="50" hits="1"></line>
+						<line number="51" hits="1"></line>
+						<line number="52" hits="1"></line>
+						<line number="53" hits="1"></line>
+						<line number="54" hits="1"></line>
+						<line number="55" hits="1"></line>
+						<line number="57" hits="1"></line>
+						<line number="59" hits="1"></line>
+						<line number="63" hits="1"></line>
+						<line number="64" hits="1"></line>
+						<line number="65" hits="1"></line>
+						<line number="66" hits="1"></line>
+						<line number="67" hits="0"></line>
+						<line number="69" hits="1"></line>
+						<line number="70" hits="1"></line>
+						<line number="74" hits="1"></line>
+						<line number="75" hits="1"></line>
+						<line number="76" hits="0"></line>
+						<line number="78" hits="1"></line>
+						<line number="79" hits="1"></line>
+						<line number="84" hits="0"></line>
+						<line number="85" hits="0"></line>
+						<line number="87" hits="0"></line>
+						<line number="88" hits="0"></line>
+					</lines>
+				</class>
+				<class name="Command" filename="command.go" line-rate="1" branch-rate="0" complexity="0" line-count="3" line-hits="3">
+					<methods>
+						<method name="ToBytes" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="40" hits="1"></line>
+								<line number="41" hits="1"></line>
+								<line number="42" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="40" hits="1"></line>
+						<line number="41" hits="1"></line>
+						<line number="42" hits="1"></line>
+					</lines>
+				</class>
+				<class name="-" filename="connectiontype_string.go" line-rate="0" branch-rate="0" complexity="0" line-count="7" line-hits="0">
+					<methods>
+						<method name="_" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="10" hits="0"></line>
+								<line number="11" hits="0"></line>
+								<line number="12" hits="0"></line>
+								<line number="13" hits="0"></line>
+								<line number="14" hits="0"></line>
+								<line number="15" hits="0"></line>
+								<line number="16" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="0"></line>
+						<line number="11" hits="0"></line>
+						<line number="12" hits="0"></line>
+						<line number="13" hits="0"></line>
+						<line number="14" hits="0"></line>
+						<line number="15" hits="0"></line>
+						<line number="16" hits="0"></line>
+					</lines>
+				</class>
+				<class name="ConnectionType" filename="connectiontype_string.go" line-rate="1" branch-rate="0" complexity="0" line-count="3" line-hits="3">
+					<methods>
+						<method name="String" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="24" hits="1"></line>
+								<line number="25" hits="1"></line>
+								<line number="27" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="24" hits="1"></line>
+						<line number="25" hits="1"></line>
+						<line number="27" hits="1"></line>
+					</lines>
+				</class>
+				<class name="-" filename="error.go" line-rate="0" branch-rate="0" complexity="0" line-count="3" line-hits="0">
+					<methods>
+						<method name="NewErrorMessage" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="36" hits="0"></line>
+								<line number="37" hits="0"></line>
+								<line number="40" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="36" hits="0"></line>
+						<line number="37" hits="0"></line>
+						<line number="40" hits="0"></line>
+					</lines>
+				</class>
+				<class name="Message" filename="message.go" line-rate="0.1904762" branch-rate="0" complexity="0" line-count="21" line-hits="4">
+					<methods>
+						<method name="Type" signature="" line-rate="0.25" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="62" hits="1"></line>
+								<line number="64" hits="0"></line>
+								<line number="66" hits="0"></line>
+								<line number="68" hits="0"></line>
+								<line number="70" hits="0"></line>
+								<line number="72" hits="0"></line>
+								<line number="74" hits="1"></line>
+								<line number="76" hits="0"></line>
+							</lines>
+						</method>
+						<method name="Socket" signature="" line-rate="0.6666667" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="82" hits="1"></line>
+								<line number="86" hits="1"></line>
+								<line number="89" hits="0"></line>
+							</lines>
+						</method>
+						<method name="SetSocket" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="94" hits="0"></line>
+								<line number="95" hits="0"></line>
+								<line number="98" hits="0"></line>
+								<line number="100" hits="0"></line>
+							</lines>
+						</method>
+						<method name="Category" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="105" hits="0"></line>
+								<line number="106" hits="0"></line>
+								<line number="107" hits="0"></line>
+								<line number="108" hits="0"></line>
+								<line number="109" hits="0"></line>
+								<line number="112" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="62" hits="1"></line>
+						<line number="64" hits="0"></line>
+						<line number="66" hits="0"></line>
+						<line number="68" hits="0"></line>
+						<line number="70" hits="0"></line>
+						<line number="72" hits="0"></line>
+						<line number="74" hits="1"></line>
+						<line number="76" hits="0"></line>
+						<line number="82" hits="1"></line>
+						<line number="86" hits="1"></line>
+						<line number="89" hits="0"></line>
+						<line number="94" hits="0"></line>
+						<line number="95" hits="0"></line>
+						<line number="98" hits="0"></line>
+						<line number="100" hits="0"></line>
+						<line number="105" hits="0"></line>
+						<line number="106" hits="0"></line>
+						<line number="107" hits="0"></line>
+						<line number="108" hits="0"></line>
+						<line number="109" hits="0"></line>
+						<line number="112" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="packet.go" line-rate="0.9230769" branch-rate="0" complexity="0" line-count="13" line-hits="12">
+					<methods>
+						<method name="NewPacket" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="41" hits="1"></line>
+								<line number="42" hits="1"></line>
+								<line number="44" hits="1"></line>
+							</lines>
+						</method>
+						<method name="PacketFromBytes" signature="" line-rate="0.9" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="54" hits="1"></line>
+								<line number="55" hits="0"></line>
+								<line number="59" hits="1"></line>
+								<line number="60" hits="1"></line>
+								<line number="63" hits="1"></line>
+								<line number="65" hits="1"></line>
+								<line number="66" hits="1"></line>
+								<line number="70" hits="1"></line>
+								<line number="71" hits="1"></line>
+								<line number="74" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="41" hits="1"></line>
+						<line number="42" hits="1"></line>
+						<line number="44" hits="1"></line>
+						<line number="54" hits="1"></line>
+						<line number="55" hits="0"></line>
+						<line number="59" hits="1"></line>
+						<line number="60" hits="1"></line>
+						<line number="63" hits="1"></line>
+						<line number="65" hits="1"></line>
+						<line number="66" hits="1"></line>
+						<line number="70" hits="1"></line>
+						<line number="71" hits="1"></line>
+						<line number="74" hits="1"></line>
+					</lines>
+				</class>
+				<class name="Packet" filename="packet.go" line-rate="1" branch-rate="0" complexity="0" line-count="11" line-hits="11">
+					<methods>
+						<method name="Bytes" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="80" hits="1"></line>
+								<line number="81" hits="1"></line>
+								<line number="82" hits="1"></line>
+								<line number="85" hits="1"></line>
+								<line number="86" hits="1"></line>
+								<line number="87" hits="1"></line>
+								<line number="88" hits="1"></line>
+								<line number="89" hits="1"></line>
+							</lines>
+						</method>
+						<method name="IsBroadcast" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="94" hits="1"></line>
+							</lines>
+						</method>
+						<method name="Source" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="99" hits="1"></line>
+							</lines>
+						</method>
+						<method name="Destination" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="104" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="80" hits="1"></line>
+						<line number="81" hits="1"></line>
+						<line number="82" hits="1"></line>
+						<line number="85" hits="1"></line>
+						<line number="86" hits="1"></line>
+						<line number="87" hits="1"></line>
+						<line number="88" hits="1"></line>
+						<line number="89" hits="1"></line>
+						<line number="94" hits="1"></line>
+						<line number="99" hits="1"></line>
+						<line number="104" hits="1"></line>
+					</lines>
+				</class>
+				<class name="-" filename="camera.go" line-rate="0.64705884" branch-rate="0" complexity="0" line-count="17" line-hits="11">
+					<methods>
+						<method name="connectionFromString" signature="" line-rate="0.53846157" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="27" hits="1"></line>
+								<line number="29" hits="0"></line>
+								<line number="30" hits="0"></line>
+								<line number="32" hits="0"></line>
+								<line number="35" hits="0"></line>
+								<line number="37" hits="1"></line>
+								<line number="38" hits="1"></line>
+								<line number="39" hits="1"></line>
+								<line number="41" hits="1"></line>
+								<line number="42" hits="0"></line>
+								<line number="43" hits="0"></line>
+								<line number="47" hits="1"></line>
+								<line number="48" hits="1"></line>
+							</lines>
+						</method>
+						<method name="NewCamera" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="64" hits="1"></line>
+								<line number="65" hits="1"></line>
+								<line number="66" hits="1"></line>
+								<line number="68" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="27" hits="1"></line>
+						<line number="29" hits="0"></line>
+						<line number="30" hits="0"></line>
+						<line number="32" hits="0"></line>
+						<line number="35" hits="0"></line>
+						<line number="37" hits="1"></line>
+						<line number="38" hits="1"></line>
+						<line number="39" hits="1"></line>
+						<line number="41" hits="1"></line>
+						<line number="42" hits="0"></line>
+						<line number="43" hits="0"></line>
+						<line number="47" hits="1"></line>
+						<line number="48" hits="1"></line>
+						<line number="64" hits="1"></line>
+						<line number="65" hits="1"></line>
+						<line number="66" hits="1"></line>
+						<line number="68" hits="1"></line>
+					</lines>
+				</class>
+				<class name="ConnectionType" filename="camera.go" line-rate="1" branch-rate="0" complexity="0" line-count="1" line-hits="1">
+					<methods>
+						<method name="isValid" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="52" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="52" hits="1"></line>
+					</lines>
+				</class>
+				<class name="-" filename="client.go" line-rate="1" branch-rate="0" complexity="0" line-count="1" line-hits="1">
+					<methods>
+						<method name="NewController" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="10" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="1"></line>
+					</lines>
+				</class>
+				<class name="Controller" filename="client.go" line-rate="0" branch-rate="0" complexity="0" line-count="1" line-hits="0">
+					<methods>
+						<method name="AddCamera" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="17" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="17" hits="0"></line>
+					</lines>
+				</class>
+				<class name="MessageType" filename="messagetype_enumer.go" line-rate="0" branch-rate="0" complexity="0" line-count="25" line-hits="0">
+					<methods>
+						<method name="String" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="16" hits="0"></line>
+								<line number="17" hits="0"></line>
+								<line number="19" hits="0"></line>
+							</lines>
+						</method>
+						<method name="IsAMessageType" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="51" hits="0"></line>
+								<line number="52" hits="0"></line>
+								<line number="53" hits="0"></line>
+								<line number="56" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MarshalJSON" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="61" hits="0"></line>
+							</lines>
+						</method>
+						<method name="UnmarshalJSON" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="66" hits="0"></line>
+								<line number="67" hits="0"></line>
+								<line number="68" hits="0"></line>
+								<line number="71" hits="0"></line>
+								<line number="72" hits="0"></line>
+								<line number="73" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MarshalText" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="78" hits="0"></line>
+							</lines>
+						</method>
+						<method name="UnmarshalText" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="83" hits="0"></line>
+								<line number="84" hits="0"></line>
+								<line number="85" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MarshalYAML" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="90" hits="0"></line>
+							</lines>
+						</method>
+						<method name="UnmarshalYAML" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="95" hits="0"></line>
+								<line number="96" hits="0"></line>
+								<line number="97" hits="0"></line>
+								<line number="100" hits="0"></line>
+								<line number="101" hits="0"></line>
+								<line number="102" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="16" hits="0"></line>
+						<line number="17" hits="0"></line>
+						<line number="19" hits="0"></line>
+						<line number="51" hits="0"></line>
+						<line number="52" hits="0"></line>
+						<line number="53" hits="0"></line>
+						<line number="56" hits="0"></line>
+						<line number="61" hits="0"></line>
+						<line number="66" hits="0"></line>
+						<line number="67" hits="0"></line>
+						<line number="68" hits="0"></line>
+						<line number="71" hits="0"></line>
+						<line number="72" hits="0"></line>
+						<line number="73" hits="0"></line>
+						<line number="78" hits="0"></line>
+						<line number="83" hits="0"></line>
+						<line number="84" hits="0"></line>
+						<line number="85" hits="0"></line>
+						<line number="90" hits="0"></line>
+						<line number="95" hits="0"></line>
+						<line number="96" hits="0"></line>
+						<line number="97" hits="0"></line>
+						<line number="100" hits="0"></line>
+						<line number="101" hits="0"></line>
+						<line number="102" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="messagetype_enumer.go" line-rate="0" branch-rate="0" complexity="0" line-count="4" line-hits="0">
+					<methods>
+						<method name="MessageTypeString" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="38" hits="0"></line>
+								<line number="39" hits="0"></line>
+								<line number="41" hits="0"></line>
+							</lines>
+						</method>
+						<method name="MessageTypeValues" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="46" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="38" hits="0"></line>
+						<line number="39" hits="0"></line>
+						<line number="41" hits="0"></line>
+						<line number="46" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="scanner.go" line-rate="1" branch-rate="0" complexity="0" line-count="10" line-hits="10">
+					<methods>
+						<method name="splitPackets" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="33" hits="1"></line>
+								<line number="35" hits="1"></line>
+								<line number="37" hits="1"></line>
+								<line number="40" hits="1"></line>
+								<line number="41" hits="1"></line>
+								<line number="43" hits="1"></line>
+							</lines>
+						</method>
+						<method name="NewScanner" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="48" hits="1"></line>
+								<line number="49" hits="1"></line>
+								<line number="50" hits="1"></line>
+								<line number="52" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="33" hits="1"></line>
+						<line number="35" hits="1"></line>
+						<line number="37" hits="1"></line>
+						<line number="40" hits="1"></line>
+						<line number="41" hits="1"></line>
+						<line number="43" hits="1"></line>
+						<line number="48" hits="1"></line>
+						<line number="49" hits="1"></line>
+						<line number="50" hits="1"></line>
+						<line number="52" hits="1"></line>
+					</lines>
+				</class>
+				<class name="Scanner" filename="scanner.go" line-rate="0.75" branch-rate="0" complexity="0" line-count="20" line-hits="15">
+					<methods>
+						<method name="Scan" signature="" line-rate="0.75" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="60" hits="1"></line>
+								<line number="62" hits="1"></line>
+								<line number="64" hits="0"></line>
+								<line number="66" hits="1"></line>
+								<line number="67" hits="1"></line>
+								<line number="68" hits="1"></line>
+								<line number="69" hits="1"></line>
+								<line number="71" hits="1"></line>
+								<line number="72" hits="1"></line>
+								<line number="73" hits="0"></line>
+								<line number="74" hits="0"></line>
+								<line number="76" hits="1"></line>
+								<line number="77" hits="1"></line>
+								<line number="79" hits="1"></line>
+								<line number="81" hits="1"></line>
+								<line number="82" hits="1"></line>
+								<line number="83" hits="0"></line>
+								<line number="84" hits="0"></line>
+								<line number="86" hits="1"></line>
+								<line number="89" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="60" hits="1"></line>
+						<line number="62" hits="1"></line>
+						<line number="64" hits="0"></line>
+						<line number="66" hits="1"></line>
+						<line number="67" hits="1"></line>
+						<line number="68" hits="1"></line>
+						<line number="69" hits="1"></line>
+						<line number="71" hits="1"></line>
+						<line number="72" hits="1"></line>
+						<line number="73" hits="0"></line>
+						<line number="74" hits="0"></line>
+						<line number="76" hits="1"></line>
+						<line number="77" hits="1"></line>
+						<line number="79" hits="1"></line>
+						<line number="81" hits="1"></line>
+						<line number="82" hits="1"></line>
+						<line number="83" hits="0"></line>
+						<line number="84" hits="0"></line>
+						<line number="86" hits="1"></line>
+						<line number="89" hits="1"></line>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+	<sources>
+		<source>/Users/sarahberry18/go/src/github.com/josh23french/visca</source>
+	</sources>
+</coverage>

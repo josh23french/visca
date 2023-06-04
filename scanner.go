@@ -71,7 +71,7 @@ loop:
 			packetBytes := s.scanner.Bytes()
 			if len(packetBytes) == 0 {
 				log.Warn().Msg("Packet is empty!!!")
-				break loop
+				continue
 			}
 			if len(packetBytes) <= 2 {
 				log.Warn().Msg("Packet is smaller than 3 bytes!")
@@ -86,5 +86,7 @@ loop:
 			c <- packet
 		}
 	}
-	close(c)
+	if c != nil {
+		close(c)
+	}
 }

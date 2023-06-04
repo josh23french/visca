@@ -41,6 +41,12 @@ func NewPacket(source, destination int, message []byte) (*Packet, error) {
 	if source > 7 || destination > 8 {
 		return nil, ErrAddressOutOfBounds
 	}
+
+	// Check for packet small/big
+	if len(message) < 1 || len(message) > 14 {
+		return nil, ErrInvalidVISCAPacket
+	}
+
 	return &Packet{
 		source:      source,
 		destination: destination,
